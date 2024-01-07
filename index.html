@@ -2,42 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Vue Hello</title>
 
-    <!--LINK BOOTSTRAP-->
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Importing Bootstrap v5.2 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
-    <!--LINK CSS-->
+    <script src="https://unpkg.com/vue@3"></script>
 
-    <link rel="stylesheet" href="style.css">
-
-    <!--FONT AWESOME-->
-    <script src="https://kit.fontawesome.com/a97229ce96.js" crossorigin="anonymous"></script>
-
-    <!-- GOOGLE FONTS-->
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&family=Roboto:ital@1&display=swap" rel="stylesheet">
-
+    <!-- Custom css -->
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    
-    <header>
-        HEADER
-    </header>
 
-    <main>
-        MAIN
-    </main>
+    <!-- creo un div dove sarà attivo VUE -->
+    <div id="app">
 
-    <footer>
-        FOOTER
-    </footer>
+        <header class="p-5">
+            <h1 class="container">
+                {{ title }}
+            </h1>
+        </header>
 
-    <script type="text/javascript" src="./js/scripts.js"></script>
-    
+        <main class="p-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <img class="img-fluid" :src="imageSrc" alt="Esempio">
+                    </div>
+                    <div class="col-12">
+                        <div class="input-group">
+                            <input type="text" v-model="imageSrc">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+    </div>
+
+    <!-- Importiamo JS -->
+    <script type="text/javascript" src="./js/script.js "></script>
 </body>
 </html>
